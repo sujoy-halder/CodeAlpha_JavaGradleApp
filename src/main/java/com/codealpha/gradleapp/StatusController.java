@@ -18,12 +18,13 @@ public class StatusController {
     }
 
     @GetMapping("/api/status")
-    public Map<String, String> status() {
-        return Map.of(
-                "status", "UP",
-                "buildTool", "Gradle",
-                "javaVersion", "17",
-                "timestamp", Instant.now().toString()
-        );
-    }
+     public Map<String, String> status() {
+    return Map.of(
+            "status", "UP",
+            "environment", "CodeAlpha",
+            "buildTool", "Gradle",
+            "javaVersion", "17",
+            "timestamp", Instant.now().toString()
+       );
+   }
 }
